@@ -1,0 +1,173 @@
+:root {
+  --primary-color: #007bff;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: var(--primary-color);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+div.centered {
+  position: relative;
+}
+
+div.centered > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.seer-sigil {
+  display: flex;
+  flex-direction: column;
+}
+
+.seer-text {
+  position: absolute;
+  top: 90%;
+  left: 52.4%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+
+.seer-enter {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.seer-sigil, .file-icon {
+  color: var(--primary-color);
+}
+
+/* password */
+
+.password-prompt {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.25rem;
+}
+
+.password-text, .password-result {
+  text-align: center;
+}
+
+.password-form {
+  display: flex;
+  align-items: stretch;
+}
+
+.password-input {
+  flex-grow: 1;
+  padding: 0.25rem;
+}
+
+.password-ok {
+  color: var(--primary-color);
+}
+
+.password-error {
+  color: orange;
+}
+
+/* main content */
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content {
+  margin: 4rem;
+  width: 45rem;
+  height: calc(100vh - 10rem);
+  max-height: -webkit-fill-available;
+  border: 3px solid var(--primary-color);
+  padding: 2rem;
+  padding-right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.files-view {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.file {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.file-content {
+  line-height: 1.5;
+  overflow-y: scroll;
+  scrollbar-color: var(--primary-color) black ;
+  scrollbar-width: thin;
+}
+
+.file-back {
+  cursor: pointer;
+}
+
+/* utility */
+
+.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.d-none {
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.fade-out {
+  animation-name: fadeOut;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}

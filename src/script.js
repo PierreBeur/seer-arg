@@ -70,6 +70,7 @@ async function check_password(event) {
     // disable password input
     passwordInput.disabled = true;
     // transition to main content
+    mainContainer.classList.remove('d-none');
     await sleep(1000);
     await fadeOut(passwordPrompt);
     filesView.classList.remove('d-none');
